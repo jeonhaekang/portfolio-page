@@ -1,3 +1,5 @@
+import { MutableRefObject } from 'react';
+
 export interface ISection {
   id: number;
   name: string;
