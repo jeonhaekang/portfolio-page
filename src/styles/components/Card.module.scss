@@ -1,0 +1,63 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/position';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+
+.card {
+  overflow: hidden;
+  background-color: colors.$WHITE;
+  border-radius: 8px;
+}
+
+.thumbnail {
+  position: relative;
+
+  & .title {
+    @include flexbox.flexbox;
+    @include position.absolute(0);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: colors.$WHITE;
+    background-color: rgba(colors.$GS_CONTENT_1, 0.8);
+    transition: 300ms;
+
+    &:hover {
+      opacity: 0;
+    }
+  }
+}
+
+.content {
+  padding: 12px;
+  font-size: 14px;
+
+  & .subTitle {
+    margin-bottom: 8px;
+    color: colors.$GS_CONTENT_2;
+  }
+
+  & .desc {
+    margin-bottom: 12px;
+    line-height: 18px;
+    color: colors.$GS_CONTENT_1;
+    white-space: pre-line;
+  }
+
+  & .link {
+    position: relative;
+    z-index: 1;
+    color: colors.$GS_CONTENT_1;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 7px;
+      content: ' ';
+      background-color: colors.$Y_HOVER;
+    }
+  }
+}
