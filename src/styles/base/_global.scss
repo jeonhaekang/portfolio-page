@@ -1,0 +1,42 @@
+@use '@/styles/mixins/responsive';
+@use '@/styles/constants/colors';
+
+.title {
+  margin-bottom: 36px;
+  font-size: 72px;
+  font-weight: 700;
+  color: colors.$WHITE;
+
+  @include responsive.tablet {
+    margin-bottom: 24px;
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  @include responsive.mobile {
+    margin-bottom: 12px;
+    font-size: 48px;
+    font-weight: 700;
+  }
+}
+
+.desc {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  color: colors.$WHITE;
+
+  @include responsive.tablet {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @include responsive.mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.bold {
+  font-weight: 500;
+}
