@@ -1,11 +1,10 @@
 import styles from '@/styles/pages/Intro.module.scss';
 
-import Animation from '@/components/Animation';
-import avatar from '@/assets/images/my_avatar.png';
-import Image from 'next/image';
-import { getImageUrl } from '@/utils/common';
 import { useRef } from 'react';
 import { IoLogoGithub, IoMail, IoLibrary } from 'react-icons/io5';
+import { getImageUrl } from '@/utils/common';
+
+import Animation from '@/components/Animation';
 
 const Intro = () => {
   const introRef = useRef<HTMLDivElement>(null);
