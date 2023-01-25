@@ -26,8 +26,6 @@ const Animation = ({
 
   const [animationPlay, setAnimationPlay] = useState(false);
 
-  console.log(animationPlay);
-
   const animationController: IntersectionObserverCallback = useCallback(
     ([entry]) => {
       const { isIntersecting } = entry;
