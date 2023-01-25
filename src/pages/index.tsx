@@ -1,4 +1,8 @@
+import Section from '@/components/Section';
 import Head from 'next/head';
+import Experience from './sections/Experience';
+import Intro from './sections/Intro';
+import Project from './sections/Project';
 
 export default function Home() {
   return (
@@ -9,6 +13,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Section name="Intro" position="center" full>
+        <Intro />
+      </Section>
+
+      <Section name="Project" color="blue">
+        <Project />
+      </Section>
+
+      <Section name="Experience" color="pink">
+        <Experience />
+      </Section>
     </>
   );
 }

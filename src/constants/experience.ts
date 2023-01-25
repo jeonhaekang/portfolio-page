@@ -1,7 +1,7 @@
 import { ICard } from '@/types/common';
 import { getImageUrl } from '@/utils/common';
 
-export const EXPERIENCE_LIST: ICard[] = [
+const EXPERIENCE_LIST: ICard[] = [
   {
     id: 1,
     imageUrl: getImageUrl('tendom.png'),
@@ -35,3 +35,5 @@ export const EXPERIENCE_LIST: ICard[] = [
     link: 'https://www.wanted.co.kr/events/pre_ob_fe_8?utm_source=email&utm_medi=braze_learning&utm_campaign=learning_pre_ob_fe_8',
   },
 ];
+
+export default EXPERIENCE_LIST;
