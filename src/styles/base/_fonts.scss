@@ -1,17 +1,10 @@
-@import 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap';
-@import '//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css';
+@import 'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap';
 
 body,
 button,
 input,
 textarea {
-  font-family:
-    'Spoqa Han Sans Neo',
-    Inter,
-    Arial,
-    PingFangSC-Regular,
-    'Microsoft YaHei',
-    sans-serif;
+  font-family: 'Noto Sans KR', Arial, PingFangSC-Regular, 'Microsoft YaHei', sans-serif;
   font-feature-settings: 'tnum';
 }
 
