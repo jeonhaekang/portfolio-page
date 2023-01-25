@@ -12,14 +12,7 @@ interface IProps {
   children: ReactNode;
 }
 
-const Animation = ({
-  target,
-  type = 'fadeIn',
-  fillMode = 'forward',
-  direction = 'default',
-  delay = 300,
-  children,
-}: IProps) => {
+const Animation = ({ target, type = 'fadeIn', direction = 'default', delay = 300, children }: IProps) => {
   const defaultTarget = useRef<HTMLDivElement>(null);
   const timeout = useRef<NodeJS.Timeout | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
@@ -32,15 +25,9 @@ const Animation = ({
 
       if (isIntersecting) {
         timeout.current = setTimeout(() => setAnimationPlay(true), delay);
-
-        if (fillMode === 'forward') {
-          observer.current?.disconnect();
-        }
-      } else {
-        setAnimationPlay(false);
       }
     },
-    [delay, fillMode]
+    [delay]
   );
 
   const connectObserver = useCallback(
@@ -69,7 +56,7 @@ const Animation = ({
   return (
     <div
       ref={defaultTarget}
-      className={cn(styles.animation, styles[fillMode], styles[direction], {
+      className={cn(styles.animation, styles[direction], {
         [styles[type]]: animationPlay,
       })}
     >
