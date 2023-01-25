@@ -1,8 +1,8 @@
 import styles from '@/styles/components/Card.module.scss';
-import { IProject } from '@/types/project';
+import { ICard } from '@/types/common';
 import RatioImage from './RatioImage';
 
-const Card = ({ imageUrl, title, subTitle, desc, link }: IProject) => {
+const Card = ({ imageUrl, title, subTitle, desc, link }: ICard) => {
   return (
     <div className={styles.card}>
       <div className={styles.thumbnail}>
