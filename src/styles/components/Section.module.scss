@@ -1,5 +1,6 @@
 @use '@/styles/constants/colors';
 @use '@/styles/mixins/responsive';
+@use '@/styles/mixins/flexbox';
 
 .section {
   position: relative;
@@ -32,4 +33,8 @@
 
 .full {
   min-height: 100vh;
+}
+
+.center {
+  @include flexbox.flexbox;
 }
