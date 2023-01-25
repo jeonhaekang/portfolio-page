@@ -1,0 +1,35 @@
+@use '@/styles/constants/colors';
+@use '@/styles/mixins/responsive';
+
+.section {
+  position: relative;
+  padding: 48px;
+
+  @include responsive.tablet {
+    padding: 36px;
+  }
+
+  @include responsive.mobile {
+    padding: 24px;
+  }
+}
+
+.blue {
+  background-color: colors.$BG_BLUE;
+}
+
+.orange {
+  background-color: colors.$BG_ORANGE;
+}
+
+.yello {
+  background-color: colors.$BG_YELLOW;
+}
+
+.pink {
+  background-color: colors.$BG_PINK;
+}
+
+.full {
+  min-height: 100vh;
+}
