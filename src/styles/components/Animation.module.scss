@@ -1,0 +1,27 @@
+@use '@/styles/mixins/animation';
+
+.animation {
+  opacity: 0;
+
+  &.fadeIn {
+    &.default {
+      @include animation.fadeIn(fade_in_default, 0, 1000ms);
+    }
+
+    &.bottom {
+      @include animation.fadeIn(fade_in_bottom, 0 100px, 1000ms);
+    }
+
+    &.top {
+      @include animation.fadeIn(fade_in_top, 0 -100px, 1000ms);
+    }
+
+    &.left {
+      @include animation.fadeIn(fade_in_left, -100px, 1000ms);
+    }
+
+    &.right {
+      @include animation.fadeIn(fade_in_right, 100px, 1000ms);
+    }
+  }
+}
