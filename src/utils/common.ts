@@ -1,3 +1,3 @@
-export const filterKeyOfArr = <I>(arr: I[], key: keyof I) => {
-  return arr.reduce((filterItems, item) => [...filterItems, item[key]], []);
+export const getImageUrl = (fileName: string) => {
+  return `https://jeon-portfolio-project.s3.ap-northeast-2.amazonaws.com/images/${fileName}`;
 };
