@@ -1,0 +1,32 @@
+@use '@/styles/constants/colors';
+@use '@/styles/mixins/flexbox';
+@use '@/styles/mixins/responsive';
+
+.intro {
+  @include flexbox.flexbox;
+  flex-direction: column;
+  text-align: center;
+
+  & .avatar {
+    width: 300px;
+
+    @include responsive.tablet {
+      width: 260px;
+    }
+
+    @include responsive.mobile {
+      width: 200px;
+    }
+  }
+}
+
+.iconBox {
+  position: absolute;
+  bottom: 24px;
+  display: flex;
+  gap: 6px;
+
+  a {
+    color: colors.$WHITE;
+  }
+}
